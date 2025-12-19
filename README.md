@@ -1,13 +1,15 @@
+That is a very scientifically accurate adjustment. You are absolutely right—if we are highlighting the **0.87 Zero-Shot F1** (which was achieved at the **P95** threshold), we must truthfully report the **0.94 Internal Accuracy** that corresponds to that same threshold, rather than "cherry-picking" the 0.96 from the P99 threshold.
+
+Listing the different thresholds is actually **much stronger** for a research repository because it shows the "Sensitivity vs. Specificity" trade-off, which is a key contribution of your paper.
+
+Here is the **Updated Raw Markdown** for your `README.md`. I have replaced the single result row with a detailed **Threshold Analysis Table**.
+
+
 # Latent Sculpting for Zero-Shot Generalization
 
 ### A Manifold Learning Approach to Out-of-Distribution Anomaly Detection
 
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rajeeb321123/Latent_sculpting_using_two_stage_method/blob/main/main.ipynb)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-ee4c2c.svg)](https://pytorch.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Paper Status](https://img.shields.io/badge/Status-Preprint-blue.svg)](https://arxiv.org/)
-
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rajeeb321123/Latent_sculpting_using_two_stage_method/blob/main/main.ipynb) [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-ee4c2c.svg)](https://pytorch.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Paper Status](https://img.shields.io/badge/Status-Preprint-blue.svg)](https://arxiv.org/)
 
 This repository contains the official PyTorch implementation of the research paper: **"Latent Sculpting for Zero-Shot Generalization: A Manifold Learning Approach to Out-of-Distribution Anomaly Detection"**.
 
@@ -19,13 +21,19 @@ Standard deep learning classifiers often suffer from **"Generalization Collapse"
 
 2. **Stage 2 (Probabilistic Expert Review):** A **Masked Autoregressive Flow (MAF)** trained exclusively on the structured benign manifold to learn an exact density estimate.
 
-### 📊 Key Results (CIC-IDS-2017)
+### 📊 Key Results (Sensitivity Analysis)
 
-| Model | Known Attacks (F1) | Zero-Shot / Unseen Attacks (F1) | Infiltration Detection Rate |
+The table below demonstrates the trade-off between **Internal Accuracy** (on known traffic) and **Generalization** (on zero-shot attacks) across different sensitivity thresholds ($P_{99}, P_{97}, P_{95}$).
+
+| Model / Threshold | Internal Accuracy (Known) | Zero-Shot F1 (Unseen) | Infiltration Detection |
 | :--- | :---: | :---: | :---: |
-| Supervised MLP Baseline | 0.98 | 0.30 | 0.00% |
-| Unsupervised OCSVM | 0.76 | 0.76 | 85.71% |
-| **Proposed Two-Stage Method** | **0.96** | **0.87** | **88.89%** |
+| Supervised MLP Baseline | **0.98** | 0.30 | 0.00% |
+| Unsupervised OCSVM | 0.79 | 0.76 | 85.71% |
+| **Ours ($P_{99}$ - Strict)** | 0.96 | 0.67 | 69.44% |
+| **Ours ($P_{97}$ - Balanced)** | 0.95 | 0.74 | 86.11% |
+| **Ours ($P_{95}$ - Sensitive)** | **0.94** | **0.87** | **88.89%** |
+
+> **Note:** Our model achieves state-of-the-art zero-shot detection ($P_{95}$) while maintaining competitive internal accuracy.
 
 ## 🛠️ Prerequisites & Setup (Google Colab)
 
