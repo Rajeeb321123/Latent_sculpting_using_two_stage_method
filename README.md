@@ -1,10 +1,3 @@
-That is a very scientifically accurate adjustment. You are absolutely right—if we are highlighting the **0.87 Zero-Shot F1** (which was achieved at the **P95** threshold), we must truthfully report the **0.94 Internal Accuracy** that corresponds to that same threshold, rather than "cherry-picking" the 0.96 from the P99 threshold.
-
-Listing the different thresholds is actually **much stronger** for a research repository because it shows the "Sensitivity vs. Specificity" trade-off, which is a key contribution of your paper.
-
-Here is the **Updated Raw Markdown** for your `README.md`. I have replaced the single result row with a detailed **Threshold Analysis Table**.
-
-
 # Latent Sculpting for Zero-Shot Generalization
 
 ### A Manifold Learning Approach to Out-of-Distribution Anomaly Detection
