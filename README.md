@@ -2,7 +2,7 @@
 
 ### A Manifold Learning Approach to Out-of-Distribution Anomaly Detection
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rajeeb321123/DHS_transformer_encoder_final.ipynb) [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-ee4c2c.svg)](https://pytorch.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Paper Status](https://img.shields.io/badge/Status-Preprint-blue.svg)](https://arxiv.org/)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/USERNAME/REPO/blob/main/DHS_transformer_encoder_final.ipynb)) [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-ee4c2c.svg)](https://pytorch.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Paper Status](https://img.shields.io/badge/Status-Preprint-blue.svg)](https://arxiv.org/)
 
 This repository contains the official PyTorch implementation of the research paper: **"Latent Sculpting for Zero-Shot Generalization: A Manifold Learning Approach to Out-of-Distribution Anomaly Detection"**.
 
