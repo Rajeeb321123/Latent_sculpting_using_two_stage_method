@@ -18,13 +18,13 @@ Standard deep learning classifiers often suffer from **"Generalization Collapse"
 
 The table below demonstrates the trade-off between **Internal Accuracy** (on known traffic) and **Generalization** (on zero-shot attacks) across different sensitivity thresholds ($P_{99}, P_{97}, P_{95}$).
 
-| Model / Threshold | Internal Accuracy (Known) | Zero-Shot F1 (Unseen) | Infiltration Detection |
+| Model / Threshold | Known Attacks (F1) | Zero-Shot / Unseen Attacks (F1) | Infiltration Detection |
 | :--- | :---: | :---: | :---: |
 | Supervised MLP Baseline | **0.98** | 0.30 | 0.00% |
-| Unsupervised OCSVM | 0.79 | 0.76 | 85.71% |
+| Unsupervised OCSVM | 0.76 | 0.76 | 85.71% |
 | **Ours ($P_{99}$ - Strict)** | 0.96 | 0.67 | 69.44% |
 | **Ours ($P_{97}$ - Balanced)** | 0.95 | 0.74 | 86.11% |
-| **Ours ($P_{95}$ - Sensitive)** | **0.94** | **0.87** | **88.89%** |
+| **Ours ($P_{95}$ - Sensitive)** | 0.94 | **0.87** | **88.89%** |
 
 > **Note:** Our model achieves state-of-the-art zero-shot detection ($P_{95}$) while maintaining competitive internal accuracy.
 
